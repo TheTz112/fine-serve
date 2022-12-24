@@ -1,0 +1,31 @@
+.header-img {
+    width: 100%;
+    height: auto;
+}
+
+.icon-con {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    top: -33px;
+    right: 30px;
+}
+
+.shopping-list-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(140.14deg, #C4B28B 15.05%, #BFAA7E 114.99%);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    column-count: 4;
+    /* or any other value */
+}
