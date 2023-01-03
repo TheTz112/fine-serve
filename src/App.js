@@ -5,6 +5,11 @@ import Home from './screens/Home';
 import CategoriesScreen from './screens/CategoriesScreen';
 import Product from './screens/Product';
 import Cart from './screens/Cart';
+import Login from './screens/Login';
+import Register from './screens/Register';
+import Checkout from './screens/Checkout';
+import Transfer from './screens/Transfer';
+import Profile from './screens/Profile';
 function App() {
   return (
     <div className="App">
@@ -15,6 +20,11 @@ function App() {
 
         <Route exact path="/Product" element={<Product />} />
         <Route exact path="/Cart" element={<Cart />} />
+        <Route exact path="/Cart/Checkout" element={<Checkout />} />
+        <Route exact path="/Cart/Checkout/Transfer" element={<Transfer />} />
+        <Route exact path="/Login" element={<Login />} />
+        <Route exact path="/Register" element={<Register />} />
+        <Route exact path="/Profile" element={<Profile />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,33 @@
+.slip-form {
+    display: flex;
+
+    padding: 2rem;
+    border-radius: 50px;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bank-right {
+    width: 100%;
+}
+
+.proceed-btn {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    width: 262px;
+    height: 42px;
+    background: linear-gradient(180deg, #D3B683 0%, #997F52 100%);
+    box-shadow: -8px -8px 20px rgba(42, 46, 53, 0.58886), 3px 8px 20px rgba(0, 0, 0, 0.353065);
+    border-radius: 37px;
+    filter: drop-shadow(3px 3px 70px rgba(250, 74, 12, 0.2));
+}

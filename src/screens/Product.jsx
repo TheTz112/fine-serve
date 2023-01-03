@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import '../styles/Product.css';
 
 const Product = () => {
@@ -20,12 +21,12 @@ const Product = () => {
   //   };
 
   function increaseQuantity(quantity, setQuantity) {
-    setQuantity(quantity + 1);
+    setQuantity(Number(quantity) + 1);
   }
 
   function decreaseQuantity(quantity, setQuantity) {
     if (quantity > 0) {
-      setQuantity(quantity - 1);
+      setQuantity(Number(quantity) - 1);
     }
   }
   return (
@@ -51,11 +52,13 @@ const Product = () => {
           <ul>
             {items.map((item) => (
               <li
+                className="size"
                 key={item}
                 onClick={() => handleClick(item)}
                 style={{
                   backgroundColor:
-                    item === selectedItem ? 'lightblue' : 'white',
+                    item === selectedItem ? '#797C7F' : '#1b1e22',
+                  color: item === selectedItem ? '#ffff' : '#797C7F',
                 }}
               >
                 {item}
@@ -63,8 +66,11 @@ const Product = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <button onClick={() => decreaseQuantity(quantity, setQuantity)}>
+        <div className="product-qty">
+          <button
+            className="qty-btn"
+            onClick={() => decreaseQuantity(quantity, setQuantity)}
+          >
             -
           </button>
           <input
@@ -73,13 +79,16 @@ const Product = () => {
             className="qty-num"
             onChange={(event) => setQuantity(event.target.value)}
           />
-          <button onClick={() => increaseQuantity(quantity, setQuantity)}>
+          <button
+            className="qty-btn"
+            onClick={() => increaseQuantity(quantity, setQuantity)}
+          >
             +
           </button>
         </div>
         <div>
-          <button className="add-to-cart" onClick={handleClick}>
-            Add to Cart
+          <button className="add-to-cart">
+            <Link to="/Cart/Checkout">Add to Cart</Link>
           </button>
         </div>
       </div>
